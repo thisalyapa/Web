@@ -213,6 +213,18 @@ small { color:var(--muted); }
   max-width: 600px;
 }
 
+.site-footer {
+  text-align: left;
+  justify-content: flex-start;
+  padding: 40px 0;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 
 
 
