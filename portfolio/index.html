@@ -34,7 +34,7 @@
     <!-- Logo -->
     <div class="brand">
       <a href="index.html" class="logo">
-        <img src="FullLogo.png" alt="TTR Logo" class="site-logo">
+        <img src="FullLogo.png" alt="Thisal Yapa Logo" class="site-logo">
       </a>
     </div>
 
@@ -44,6 +44,7 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="projects.html" class="nav-link">Projects</a>
       <a href="contact.html" class="nav-link">Contact</a>
+      <a href="../techsolutions/index.html" class="nav-link">My Business</a>
     </nav>
 
     <!-- Controls -->
@@ -63,65 +64,54 @@
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
+    <a href="../techsolutions/index.html">My Business</a>
   </div>
 </header>
 
-
-    <!-- Mobile nav (slides down) -->
-    <div id="mobile-nav" class="mobile-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content fade-up">
-          <h1 class="hello">Hi, I’m <span class="name">Thisal Yapa</span></h1>
-          <p class="typing-line"> <span id="typed"></span><span class="cursor">|</span></p>
-          <p class="lead">
-            I’m an undergraduate Computer Engineering student at the University of Peradeniya, Sri Lanka.
-            I love exploring systems programming, embedded design, and software development — 
-            building projects that combine code, creativity, and engineering.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="projects.html">View My Projects</a>
-            <a class="btn ghost" href="contact.html">Contact Me</a>
-          </div>
-
-         
-        </div>
-
-        <div class="hero-photo fade-up delay-1">
-          <div class="photo-frame">
-            <img src="myphoto.jpg" alt="Thisal Yapa" onerror="this.src='https://via.placeholder.com/420x420?text=Your+Photo'">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SNIPPET -->
-    <section class="about container fade-up delay-2">
-      <div class="about-card">
-        <h2>About Me</h2>
-        <p>
-          I’m an undergraduate student in Computer Engineering at the University of Peradeniya, Sri Lanka.
-          I’m passionate about programming, electronics, and systems — constantly learning and building meaningful projects.
+<!-- HERO -->
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content fade-up">
+        <h1 class="hello">Hi, I’m <span class="name">Thisal Yapa</span></h1>
+        <p class="typing-line"><span id="typed"></span><span class="cursor">|</span></p>
+        <p class="lead">
+          I’m an undergraduate Computer Engineering student at the University of Peradeniya, Sri Lanka.
+          I love exploring systems programming, embedded design, and software development —
+          building projects that combine code, creativity, and engineering.
         </p>
-        <div class="about-actions">
-          <a class="link" href="projects.html">See projects →</a>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="projects.html">View My Projects</a>
+          <a class="btn ghost" href="contact.html">Contact Me</a>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+      <div class="hero-photo fade-up delay-1">
+        <div class="photo-frame">
+          <img src="myphoto.jpg" alt="Thisal Yapa" onerror="this.src='https://via.placeholder.com/420x420?text=Your+Photo'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SNIPPET -->
+  <section class="about container fade-up delay-2">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>
+        I’m an undergraduate student in Computer Engineering at the University of Peradeniya, Sri Lanka.
+        I’m passionate about programming, electronics, and systems — constantly learning and building meaningful projects.
+      </p>
+      <div class="about-actions">
+        <a class="link" href="projects.html">See projects →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-left">
       <h3 style="margin: 0; font-weight: 700;">My Business</h3>
@@ -130,98 +120,94 @@
   </div>
 </footer>
 
+<!-- Scroll to top -->
+<button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- Scroll to top -->
-  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+<!-- Scripts -->
+<script>
+  // Typing animation
+  (function() {
+    const texts = ["Undergraduate Computer Engineering Student (UOP) | Developer | Learner"];
+    const el = document.getElementById('typed');
+    const cursor = document.querySelector('.cursor');
+    let textIndex = 0, charIndex = 0, forward = true;
 
-  <!-- Scripts -->
-  <script>
-    // Typing animation (with your new tagline)
-    (function() {
-      const texts = ["Undergraduate Computer Engineering Student (UOP) | Developer | Learner"];
-      const el = document.getElementById('typed');
-      const cursor = document.querySelector('.cursor');
-      let textIndex = 0, charIndex = 0, forward = true;
-
-      function tick() {
-        const text = texts[textIndex];
-        if (forward) {
-          if (charIndex < text.length) {
-            el.textContent += text[charIndex++];
-            setTimeout(tick, 60);
-          } else {
-            forward = false;
-            setTimeout(tick, 900);
-          }
+    function tick() {
+      const text = texts[textIndex];
+      if (forward) {
+        if (charIndex < text.length) {
+          el.textContent += text[charIndex++];
+          setTimeout(tick, 60);
         } else {
-          if (charIndex > 0) {
-            el.textContent = text.slice(0, --charIndex);
-            setTimeout(tick, 30);
-          } else {
-            forward = true;
-            textIndex = (textIndex + 1) % texts.length;
-            setTimeout(tick, 300);
-          }
+          forward = false;
+          setTimeout(tick, 900);
+        }
+      } else {
+        if (charIndex > 0) {
+          el.textContent = text.slice(0, --charIndex);
+          setTimeout(tick, 30);
+        } else {
+          forward = true;
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(tick, 300);
         }
       }
-      tick();
+    }
+    tick();
 
-      // Cursor blink
-      setInterval(() => {
-        cursor.style.opacity = (cursor.style.opacity == 0 ? 1 : 0);
-      }, 500);
-    })();
+    setInterval(() => {
+      cursor.style.opacity = (cursor.style.opacity == 0 ? 1 : 0);
+    }, 500);
+  })();
 
-    // Theme toggle
-    (function() {
-      const btn = document.getElementById('theme-toggle');
-      const icon = document.getElementById('theme-icon');
-      function setIcon(theme) {
-        icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-      }
-      function getTheme() {
-        return document.documentElement.getAttribute('data-theme') || 'dark';
-      }
-      setIcon(getTheme());
-      btn.addEventListener('click', () => {
-        const newTheme = getTheme() === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        setIcon(newTheme);
-      });
-    })();
+  // Theme toggle
+  (function() {
+    const btn = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    function setIcon(theme) {
+      icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+    function getTheme() {
+      return document.documentElement.getAttribute('data-theme') || 'dark';
+    }
+    setIcon(getTheme());
+    btn.addEventListener('click', () => {
+      const newTheme = getTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      setIcon(newTheme);
+    });
+  })();
 
-    // Mobile menu toggle
-    (function() {
-      const menuBtn = document.getElementById('menu-toggle');
-      const mobileNav = document.getElementById('mobile-nav');
-      menuBtn && menuBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('open');
-      });
-      mobileNav && mobileNav.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') mobileNav.classList.remove('open');
-      });
-    })();
+  // Mobile menu toggle
+  (function() {
+    const menuBtn = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn && menuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav && mobileNav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') mobileNav.classList.remove('open');
+    });
+  })();
 
-    // Scroll to top button
-    (function() {
-      const topBtn = document.getElementById('scroll-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) topBtn.classList.add('visible');
-        else topBtn.classList.remove('visible');
-      });
-      topBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    })();
+  // Scroll to top button
+  (function() {
+    const topBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) topBtn.classList.add('visible');
+      else topBtn.classList.remove('visible');
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
 
-    // Current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  // Current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
-<a href="../techsolutions/index.html" class="nav-link">My Business</a>
 
 
 
