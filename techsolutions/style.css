@@ -82,6 +82,17 @@ a.link {
 html {
   scroll-behavior: smooth;
 }
+.site-footer {
+  text-align: left;
+  justify-content: flex-start;
+  padding: 40px 0;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
   
   
