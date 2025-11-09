@@ -38,7 +38,7 @@
       <a href="#home" class="nav-link active">Home</a>
       <a href="#services" class="nav-link">Services</a>
       <a href="#projects" class="nav-link">Projects</a>
-      <a href="#clients" class="nav-link">Clients</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="../portfolio/index.html" class="nav-link">Portfolio</a>
     </nav>
@@ -53,7 +53,7 @@
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
-    <a href="#clients">Clients</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
     <a href="../portfolio/index.html">Portfolio</a>
   </div>
@@ -84,10 +84,10 @@
   <div class="about-card">
     <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="about-card"><h3>Web Development</h3><p>Responsive and scalable web apps, APIs, and dashboards built for performance.</p></div>
-      <div class="about-card"><h3>Mobile Apps</h3><p>Cross-platform and native mobile experiences that engage your audience anywhere.</p></div>
-      <div class="about-card"><h3>Custom Software</h3><p>Desktop, embedded, and cloud software tailored to your unique workflow.</p></div>
-      <div class="about-card"><h3>IT Consulting</h3><p>Helping teams design architectures, deploy solutions, and scale with confidence.</p></div>
+      <div class="service-item"><h3>Web Development</h3><p>Responsive and scalable web apps, APIs, and dashboards built for performance.</p></div>
+      <div class="service-item"><h3>Mobile Apps</h3><p>Cross-platform and native mobile experiences that engage your audience anywhere.</p></div>
+      <div class="service-item"><h3>Custom Software</h3><p>Desktop, embedded, and cloud software tailored to your unique workflow.</p></div>
+      <div class="service-item"><h3>IT Consulting</h3><p>Helping teams design architectures, deploy solutions, and scale with confidence.</p></div>
     </div>
   </div>
 </section>
@@ -96,101 +96,13 @@
   <div class="about-card">
     <h2>Our Projects</h2>
     <div class="projects-grid">
-      <div class="about-card"><h3>Inventory System</h3><p>Web-based system for tracking inventory and analytics across multiple branches.</p></div>
-      <div class="about-card"><h3>Smart Home App</h3><p>IoT mobile app controlling devices with real-time sync and automation.</p></div>
-      <div class="about-card"><h3>Business Dashboard</h3><p>Custom analytics dashboard integrating cloud APIs and visual reports.</p></div>
+      <div class="project-item"><h3>Inventory System</h3><p>Web-based system for tracking inventory and analytics across multiple branches.</p></div>
+      <div class="project-item"><h3>Smart Home App</h3><p>IoT mobile app controlling devices with real-time sync and automation.</p></div>
+      <div class="project-item"><h3>Business Dashboard</h3><p>Custom analytics dashboard integrating cloud APIs and visual reports.</p></div>
     </div>
   </div>
 </section>
 
-<section id="clients" class="about container fade-up delay-3">
+<section id="testimonials" class="about container fade-up delay-3">
   <div class="about-card">
-    <h2>Our Clients</h2>
-    <p>We’re proud to partner with innovative companies and visionary startups around the world.</p>
-    <div class="clients-grid">
-      <img class="client-logo" src="https://via.placeholder.com/140x60?text=Client+1" alt="Client 1">
-      <img class="client-logo" src="https://via.placeholder.com/140x60?text=Client+2" alt="Client 2">
-      <img class="client-logo" src="https://via.placeholder.com/140x60?text=Client+3" alt="Client 3">
-      <img class="client-logo" src="https://via.placeholder.com/140x60?text=Client+4" alt="Client 4">
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="about container fade-up delay-2">
-  <div class="about-card">
-    <h2>Contact Us</h2>
-    <p>We’d love to discuss your next big idea! Reach out to us through email or connect on our social media channels below.</p>
-
-    <div class="contact-links-grid">
-      <a class="contact-link-card" href="mailto:thulnith710Z@gmail.com">
-        <i class="fas fa-envelope fa-2x" style="color: var(--primary-color);"></i>
-        <h3>Email</h3>
-        <p>thulnith710Z@gmail.com</p>
-      </a>
-
-      <a class="contact-link-card" href="https://www.linkedin.com/in/yourprofile" target="_blank">
-        <i class="fab fa-linkedin fa-2x" style="color: #0e76a8;"></i>
-        <h3>LinkedIn</h3>
-        <p>Connect Professionally</p>
-      </a>
-
-      <a class="contact-link-card" href="https://github.com/yourusername" target="_blank">
-        <i class="fab fa-github fa-2x" style="color: var(--text-color);"></i> 
-        <h3>GitHub</h3>
-        <p>View My Code</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <h3 style="margin: 0; font-weight: 700;">My Business</h3>
-      <small>© <span id="year"></span> Thisal Yapa • All rights reserved.</small>
-    </div>
-  </div>
-</footer>
-
-
-<button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-
-<script>
-(function(){
-  const btn=document.getElementById('theme-toggle'), icon=document.getElementById('theme-icon');
-  function setIcon(t){icon.className=t==='dark'?'fas fa-moon':'fas fa-sun';}
-  function getTheme(){return document.documentElement.getAttribute('data-theme')||'dark';}
-  setIcon(getTheme());
-  btn.addEventListener('click',()=>{const n=getTheme()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);setIcon(n);});
-
-  const menu=document.getElementById('menu-toggle'),nav=document.getElementById('mobile-nav');
-  menu&&menu.addEventListener('click',()=>nav.classList.toggle('open'));
-  nav&&nav.addEventListener('click',e=>{if(e.target.tagName==='A')nav.classList.remove('open');});
-
-  const topBtn=document.getElementById('scroll-top');
-  window.addEventListener('scroll',()=>topBtn.classList.toggle('visible',window.scrollY>400));
-  topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-  document.getElementById('year').textContent=new Date().getFullYear();
-
-  // Animate client logos on scroll
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  },{threshold:0.2});
-  document.querySelectorAll('.client-logo').forEach(img=>observer.observe(img));
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const id=a.getAttribute('href');
-      if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}
-    });
-  });
-})();
-</script>
-
-</body>
-</html>
-
-
+    <h2>
