@@ -6,13 +6,11 @@
   <title>TTR Tech Solutions</title>
   <meta name="description" content="TTR Tech Solutions — Innovative Digital Solutions for a Smarter Future." />
 
-  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Custom Style for Business Site -->
   <link rel="stylesheet" href="style.css" />
 
   <script>
@@ -24,7 +22,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
@@ -62,7 +59,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
   <div class="container hero-grid">
     <div class="hero-content fade-up">
@@ -84,7 +80,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="about container fade-up delay-1">
   <div class="about-card">
     <h2>Our Services</h2>
@@ -97,7 +92,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="about container fade-up delay-2">
   <div class="about-card">
     <h2>Our Projects</h2>
@@ -109,7 +103,6 @@
   </div>
 </section>
 
-<!-- CLIENTS -->
 <section id="clients" class="about container fade-up delay-3">
   <div class="about-card">
     <h2>Our Clients</h2>
@@ -123,24 +116,33 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="about container fade-up delay-2">
   <div class="about-card">
     <h2>Contact Us</h2>
-    <p>We’d love to discuss your next big idea! Reach us via email or the form below.</p>
-    <form class="contact-form" action="mailto:thulnith710Z@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn primary">Send Message</button>
-    </form>
-    <p style="margin-top:12px;">Or email us directly: 
-      <a class="link" href="mailto:thulnith710Z@gmail.com">thulnith710Z@gmail.com</a>
-    </p>
+    <p>We’d love to discuss your next big idea! Reach out to us through email or connect on our social media channels below.</p>
+
+    <div class="contact-links-grid">
+      <a class="contact-link-card" href="mailto:thulnith710Z@gmail.com">
+        <i class="fas fa-envelope fa-2x" style="color: var(--primary-color);"></i>
+        <h3>Email</h3>
+        <p>thulnith710Z@gmail.com</p>
+      </a>
+
+      <a class="contact-link-card" href="https://www.linkedin.com/in/yourprofile" target="_blank">
+        <i class="fab fa-linkedin fa-2x" style="color: #0e76a8;"></i>
+        <h3>LinkedIn</h3>
+        <p>Connect Professionally</p>
+      </a>
+
+      <a class="contact-link-card" href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github fa-2x" style="color: var(--text-color);"></i> 
+        <h3>GitHub</h3>
+        <p>View My Code</p>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-left">
@@ -153,7 +155,6 @@
 
 <button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- JS -->
 <script>
 (function(){
   const btn=document.getElementById('theme-toggle'), icon=document.getElementById('theme-icon');
@@ -191,6 +192,5 @@
 
 </body>
 </html>
-
 
 
