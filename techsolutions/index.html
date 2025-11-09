@@ -105,4 +105,95 @@
 
 <section id="testimonials" class="about container fade-up delay-3">
   <div class="about-card">
-    <h2>
+    <h2>Client Success Stories</h2>
+    <p>We deliver results that speak for themselves. Hear from our satisfied partners:</p>
+    
+    <div class="testimonial-grid">
+      <blockquote class="testimonial-card">
+        <p>"TTR Tech Solutions transformed our workflow. Their custom inventory system is intuitive and saved us 20% in operational time."</p>
+        <footer>— **Jane Doe**, CEO of TechCorp</footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>"The team's consulting was invaluable. They helped us scale our cloud architecture efficiently and cost-effectively."</p>
+        <footer>— **John Smith**, CTO of Innovate Inc.</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="about container fade-up delay-2">
+  <div class="about-card">
+    <h2>Contact Us</h2>
+    <p>We’d love to discuss your next big idea! Reach out to us through email or connect on our social media channels below.</p>
+
+    <div class="contact-links-grid">
+      <a class="contact-link-card" href="mailto:thulnith710Z@gmail.com">
+        <i class="fas fa-envelope fa-2x" style="color: var(--accent);"></i>
+        <h3>Email</h3>
+        <p>thulnith710Z@gmail.com</p>
+      </a>
+
+      <a class="contact-link-card" href="https://www.linkedin.com/in/yourprofile" target="_blank">
+        <i class="fab fa-linkedin fa-2x" style="color: #0e76a8;"></i>
+        <h3>LinkedIn</h3>
+        <p>Connect Professionally</p>
+      </a>
+
+      <a class="contact-link-card" href="https://github.com/yourusername" target="_blank">
+        <i class="fab fa-github fa-2x" style="color: var(--text-color);"></i> 
+        <h3>GitHub</h3>
+        <p>View My Code</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <h3 style="margin: 0; font-weight: 700;">TTR Tech Solutions</h3>
+      <small>© <span id="year"></span> Thisal Yapa • All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+
+<button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+(function(){
+  // Theme Toggle Logic
+  const btn=document.getElementById('theme-toggle'), icon=document.getElementById('theme-icon');
+  function setIcon(t){icon.className=t==='dark'?'fas fa-moon':'fas fa-sun';}
+  function getTheme(){return document.documentElement.getAttribute('data-theme')||'dark';}
+  setIcon(getTheme());
+  btn.addEventListener('click',()=>{const n=getTheme()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);setIcon(n);});
+
+  // Mobile Menu Logic
+  const menu=document.getElementById('menu-toggle'),nav=document.getElementById('mobile-nav');
+  menu&&menu.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav&&nav.addEventListener('click',e=>{if(e.target.tagName==='A')nav.classList.remove('open');});
+
+  // Scroll Behavior Logic (Scroll to Top & STICKY HEADER)
+  const topBtn=document.getElementById('scroll-top');
+  const header = document.querySelector('.site-header'); // Get the header element
+  window.addEventListener('scroll',()=>{
+    topBtn.classList.toggle('visible',window.scrollY>400);
+    // Toggle 'scrolled' class on the header after 50px scroll
+    header.classList.toggle('scrolled', window.scrollY > 50); 
+  });
+  topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Smooth scroll for anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href');
+      if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
