@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thisal Yapa — Home</title>
+  <title>Thisal Yapa — Computer Engineering Portfolio</title>
   <meta name="description" content="Thisal Yapa — Undergraduate Computer Engineering student at the University of Peradeniya, Sri Lanka. Developer, Engineer, Learner." />
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Theme preference: dark by default -->
   <script>
     (function() {
       const stored = localStorage.getItem('theme');
@@ -28,17 +24,14 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="site-header">
   <div class="container header-inner">
-    <!-- Logo -->
     <div class="brand">
       <a href="index.html" class="logo">
         <img src="FullLogo.png" alt="Thisal Yapa Logo" class="site-logo">
       </a>
     </div>
 
-    <!-- Navigation -->
     <nav class="nav">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="about.html" class="nav-link">About</a>
@@ -47,7 +40,6 @@
       <a href="../techsolutions/index.html" class="nav-link">My Business</a>
     </nav>
 
-    <!-- Controls -->
     <div class="header-controls">
       <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle dark/light">
         <i id="theme-icon" class="fas"></i>
@@ -58,7 +50,6 @@
     </div>
   </div>
 
-  <!-- Mobile Navigation -->
   <div id="mobile-nav" class="mobile-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -68,7 +59,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <main>
   <section class="hero">
     <div class="container hero-grid">
@@ -77,12 +67,13 @@
         <p class="typing-line"><span id="typed"></span><span class="cursor">|</span></p>
         <p class="lead">
           I’m an undergraduate Computer Engineering student at the University of Peradeniya, Sri Lanka.
-          I love exploring systems programming, embedded design, and software development —
+          I love exploring **systems programming**, **embedded design**, and **software development** —
           building projects that combine code, creativity, and engineering.
         </p>
 
         <div class="hero-actions">
           <a class="btn primary" href="projects.html">View My Projects</a>
+          <a class="btn ghost" href="path/to/your/resume.pdf" download>Download Resume</a>
           <a class="btn ghost" href="contact.html">Contact Me</a>
         </div>
       </div>
@@ -95,7 +86,6 @@
     </div>
   </section>
 
-  <!-- ABOUT SNIPPET -->
   <section class="about container fade-up delay-2">
     <div class="about-card">
       <h2>About Me</h2>
@@ -110,24 +100,21 @@
   </section>
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-left">
-      <h3 style="margin: 0; font-weight: 700;">My Business</h3>
+      <h3 style="margin: 0; font-weight: 700;">TTR Tech Solutions</h3>
       <small>© <span id="year"></span> Thisal Yapa • All rights reserved.</small>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to top -->
 <button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- Scripts -->
 <script>
   // Typing animation
   (function() {
-    const texts = ["Undergraduate Computer Engineering Student (UOP) | Developer | Learner"];
+    const texts = ["Undergraduate Computer Engineering Student (UOP)", "Developer", "Learner"];
     const el = document.getElementById('typed');
     const cursor = document.querySelector('.cursor');
     let textIndex = 0, charIndex = 0, forward = true;
@@ -155,6 +142,7 @@
     }
     tick();
 
+    // Cursor blink logic
     setInterval(() => {
       cursor.style.opacity = (cursor.style.opacity == 0 ? 1 : 0);
     }, 500);
@@ -191,7 +179,7 @@
     });
   })();
 
-  // Scroll to top button
+  // Scroll to top button (Simplified)
   (function() {
     const topBtn = document.getElementById('scroll-top');
     window.addEventListener('scroll', () => {
@@ -208,7 +196,6 @@
 </script>
 </body>
 </html>
-
 
 
 
